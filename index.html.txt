@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Sonam ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#ffdce6,#ffc2d1);
+  overflow-x:hidden;
+  color:white;
+}
+
+section{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:40px;
+  position:relative;
+}
+
+.card{
+  width:90%;
+  max-width:1000px;
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(12px);
+  border-radius:30px;
+  padding:60px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.15);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+  animation:fadeUp 1s ease;
+}
+
+.text{
+  flex:1;
+}
+
+.image{
+  flex:1;
+  display:flex;
+  justify-content:center;
+}
+
+.image img{
+  width:100%;
+  max-width:350px;
+  border-radius:20px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+h1{
+  font-size:4rem;
+  font-family:'Dancing Script',cursive;
+  margin-bottom:20px;
+}
+
+p{
+  font-size:1.2rem;
+  line-height:2;
+}
+
+button{
+  margin-top:30px;
+  padding:15px 40px;
+  border:none;
+  border-radius:50px;
+  background:white;
+  color:#ff4f81;
+  font-size:1rem;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.08);
+}
+
+.hero{
+  flex-direction:column;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:5rem;
+}
+
+.heart{
+  position:fixed;
+  bottom:-20px;
+  font-size:20px;
+  animation:float 6s linear infinite;
+  opacity:0.7;
+}
+
+@keyframes float{
+  0%{
+    transform:translateY(0) scale(0);
+  }
+  100%{
+    transform:translateY(-120vh) scale(1.5);
+  }
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(50px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.final{
+  text-align:center;
+  flex-direction:column;
+}
+
+.final h1{
+  font-size:5rem;
+}
+
+.music{
+  position:fixed;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  background:white;
+  padding:10px 20px;
+  border-radius:50px;
+  color:#ff4f81;
+  font-weight:bold;
+}
+
+@media(max-width:768px){
+
+  .card{
+    flex-direction:column;
+    text-align:center;
+    padding:30px;
+  }
+
+  h1{
+    font-size:3rem;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+  <h1>Hey Sonam 💖</h1>
+
+  <p>
+    I made this cute little website just for you 🌸
+  </p>
+
+  <button onclick="scrollToNext()">
+    Click Here 💌
+  </button>
+
+</section>
+
+<section>
+
+  <div class="card">
+
+    <div class="text">
+      <h1>You Make Me Feel ✨</h1>
+
+      <p>
+        You complete me.<br>
+        You make me feel alive again.<br>
+        I love talking to you every day 💕
+      </p>
+    </div>
+
+    <div class="image">
+      <img src="https://i.pinimg.com/736x/4e/5d/9c/4e5d9cba65f0cc64cbfc0c93dc0f9a1f.jpg">
+    </div>
+
+  </div>
+
+</section>
+
+<section>
+
+  <div class="card">
+
+    <div class="text">
+      <h1>I Need To Tell You 💌</h1>
+
+      <p>
+        I don't know how you'll react...<br>
+        but I really like you.<br>
+        I care about you a lot 🌷
+      </p>
+    </div>
+
+    <div class="image">
+      <img src="https://i.pinimg.com/736x/57/06/ee/5706ee38ef4c4ef53f2e0b7df6cdbf59.jpg">
+    </div>
+
+  </div>
+
+</section>
+
+<section class="final">
+
+  <div class="card final">
+
+    <h1>So... 💖</h1>
+
+    <h1>Will You Be Mine?</h1>
+
+    <button onclick="alert('YAYYYYY ❤️')">
+      Yes 💘
+    </button>
+
+  </div>
+
+</section>
+
+<div class="music">
+🎵 Perfect - Ed Sheeran
+</div>
+
+<script>
+
+function scrollToNext(){
+  window.scrollTo({
+    top:window.innerHeight,
+    behavior:'smooth'
+  });
+}
+
+function createHeart(){
+
+  const heart=document.createElement('div');
+
+  heart.classList.add('heart');
+
+  heart.innerHTML='💖';
+
+  heart.style.left=Math.random()*100+'vw';
+
+  heart.style.animationDuration=(Math.random()*3+3)+'s';
+
+  document.body.appendChild(heart);
+
+  setTimeout(()=>{
+    heart.remove();
+  },6000);
+
+}
+
+setInterval(createHeart,250);
+
+</script>
+
+</body>
+</html>
